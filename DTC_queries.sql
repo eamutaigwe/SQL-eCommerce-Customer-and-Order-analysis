@@ -1,98 +1,83 @@
 -- Create 'customer' table
-create table customer (
-	customer_id varchar,
-	customer_name varchar,
-	segment varchar,
-	age int,
-	country varchar,
-	city varchar,
-	state varchar,
-	postal_code int,
-	region varchar
+CREATE TABLE customer (
+	customer_id VARCHAR,
+	customer_name VARCHAR,
+	segment VARCHAR,
+	age INT,
+	country VARCHAR,
+	city VARCHAR,
+	state VARCHAR,
+	postal_code INT,
+	region VARCHAR
 );
-
--- select all columns
-select *
-from customer;
-
 
 -- Load data and populate the customer table
 copy customer
 from '/Library/PostgreSQL/customer.csv' delimiter ',' csv header;
 
 
--- select all columns again to ensure the column values have been added
-select *
-from customer;
+-- select all columns to ensure the column values have been added
+SELECT *
+FROM customer;
 
 
---- select customers with IDs starting with an "A"
-select *
-from customer
-where customer_id like 'A%';
+--- select customers with IDs starting with an "A" to verify the data
+SELECT *
+FROM customer
+WHERE customer_id LIKE 'A%';
 
 
 -- Create 'sales' table
-create table sales (
-	order_id varchar,
-	order_date date,
-	ship_date date,
-	ship_mode varchar,
-	customer_id varchar,
-	product_id varchar,
-	sales numeric,
-	quantity int,
-	discount numeric,
-	profit numeric
+CREATE TABLE sales (
+	order_id VARCHAR,
+	order_date DATE,
+	ship_date DATE,
+	ship_mode VARCHAR,
+	customer_id VARCHAR,
+	product_id VARCHAR,
+	sales NUMERIC,
+	quantity INT,
+	discount NUMERIC,
+	profit NUMERIC
 );
-
--- select all columns
-select *
-from sales;
-
 
 -- Load data and populate the sales table
 copy sales
 from '/Library/PostgreSQL/sales.csv' delimiter ',' csv header;
 
 
--- select all columns again to ensure the column values have been added
-select *
-from sales;
+-- select all columns to ensure the column values have been added
+SELECT *
+FROM sales;
 
 
 --- select sales with shipping mode as "Second Class"
-select *
-from sales
-where ship_mode = 'Second Class'
-	and sales > 200
-limit 10;
+SELECT *
+FROM sales
+WHERE ship_mode = 'Second Class'
+	AND sales > 200
+LIMIT 10;
 
 
 -- Create 'product' table
-create table product (
-	product_id varchar,
-	category varchar,
-	sub_category varchar,
-	product_name varchar
+CREATE TABLE product (
+	product_id VARCHAR,
+	category VARCHAR,
+	sub_category VARCHAR,
+	product_name VARCHAR
 );
-
--- select all columns
-select *
-from product;
-
 
 -- Load data and populate the product table
 copy product
 from '/Library/PostgreSQL/product.csv' delimiter ',' csv header;
 
 
--- select all columns again to ensure the column values have been added
-select *
-from product;
+-- select all columns to ensure the column values have been added
+SELECT *
+FROM product;
 
 
---- select products in the "Office Supplies" category
-select *
-from product
-where category = 'Office Supplies';
+--- select products in the "Office Supplies" category to verify the data
+SELECT *
+FROM product
+WHERE category = 'Office Supplies';
