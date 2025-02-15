@@ -1,4 +1,4 @@
-**SQL-eCommerce-KPI-analysis**
+**SQL-eCommerce-Customer-and-Order-analysis**
 
 **Background**
 
