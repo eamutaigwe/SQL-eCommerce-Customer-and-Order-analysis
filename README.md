@@ -6,7 +6,7 @@ E-commerce companies utilize insights from historical transactional data to make
 
 **Goal**
 
-To execute an end-to-end data analytics project using e-commerce/retail datasets, including an ETL (extract, transform and load) process followed by building data models and interactive dashboards to provide actionable insights into key indicators driving revenue, profit and overall business performance and growth, and generating a report for presentation.
+To write SQL queries to extract specific information on customers, their demographics and associated products ordered over a determined period to inform advertisement, campaign and investment efforts to drive revenue generation.
 
 **Methodology**
 
@@ -23,16 +23,26 @@ There is a README.md file which summarizes the project goals, data tables and me
 + `sales.csv`
 + `product.csv`
 
-2. The `images` folder contains the following:
-+ `Entity-Relationship Diagram` I generated to direct the relationship among the tables
-+  Four `Power BI Dashboard solutions` I built to visualize and communicate relevant KPIs
-
-3. The `merge_tables_for_PowerBI.sql` file contains the SQL queries I used to prepare the three tables for analysis with Power BI.
+2. The `DTC_queries.sql` file contains SQL queries I used to create and populate the customer, sales and product tables within the PostgreSQL database for analysis.
+3. The `eCommerce_KPI_analysis.sql` file contains SQL queries I generated to answer questions important for driving revenue growth and marketing efforts.
 
 **Data processing**
 
-1. I uploaded the extracted data tables to Power BI and cleaned these up by changing data fields to the correct data types and ensuring there were no missing data.
+1. I wrote SQL queries to create customer, sales and product tables within the PostgreSQL database and populate them with records from `.csv` tables.
 
-2. Next, I generated KPIs and secondary metrics using DAX functions and measures.
+2. Next, I wrote SQL queries to answer key questions to better understand customer demographics and product order performance.
 
-3. Finally, I created appropriate charts and graphs representing KPIs and other relevant metrics and projected these using interactive dashboard solutions.
+**Questions answered**
+
++ Q1: What are the customer name, country, age and city for only customers that live in the state of California and are over 25 years for the consumer segment. Sort the result by age in ascending order.
++ Q2: Display the total count of customers by segment.
++ Q3: Write a query to categorize profits that are below 100 as Low Margin, within the range of 100 - 300 as Mid Margin then every other profit that doesn't fall in either of the categories as High for all orders purchased in 2016. Display the result for only the top 20.
++ Q4: Calculate the total sales for each region in the last 7 years.
++ Q5: What is the total number of orders that were not shipped with first class and standard class. Sort the result by the ship mode.
++ Q6: Write a query to show the ship mode, ship_date, total sales, profits and order quantity for all orders that were shipped the earliest.
++ Q7: Write a query that returns all the orders that are above 1000 in sales, from only first-class ship mode and are shipped between May and June 2015.
++ Q8: Write a query for the top 10 orders by fetching customer name, age, state, total sales, total profit, product category and subcategory for only orders placed in 2016 in all states excluding Florida & Utah.
++ Q9: Write a query to pull customer_id, age, city, sales, profits, ship mode and ship date of transactions purchased in 2017, for all states excluding California, New York and Texas, city does not include null and customer’s age group of 20-60. Sort the result in descending order.
++ Q10: Write a query to show the average age of customers, include their region and city and total number of orders for orders purchased in 2017, for all customers excluding customers in Texas. Sort by region.
++ Q11: Find the top 10 products with the highest profit in the last 6 years.
++ Q12: Get the top 10 best-selling products in the last 7 years.
