@@ -18,13 +18,14 @@ I extracted Customer, Sales, and Product datasets from a PostgreSQL database usi
 
 There is a README.md file which summarizes the project goals, data tables and methodology, results, insights and recommendations.
 
-1. The `data` folder contains the three datasets used in the analysis
+1. The `data` folder contains the three datasets used in the analysis:
 + `customer.csv`
 + `sales.csv`
 + `product.csv`
-
-2. The `DTC_queries.sql` file contains SQL queries I used to create and populate the customer, sales and product tables within the PostgreSQL database for analysis.
-3. The `eCommerce_KPI_analysis.sql` file contains SQL queries I generated to answer questions important for driving revenue growth and marketing efforts.
+  
+2. The `scripts` folder contains two SQL query files:
++ `DTC_queries.sql` which contains SQL queries I used to create and populate the customer, sales and product tables within the PostgreSQL database for analysis.
++ `eCommerce_KPI_analysis.sql` which contains SQL queries I generated to answer questions important for driving revenue growth and marketing efforts.
 
 **Data processing**
 
