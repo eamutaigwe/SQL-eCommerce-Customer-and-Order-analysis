@@ -6,7 +6,7 @@ E-commerce companies utilize insights from historical transactional data to make
 
 **Goal**
 
-To write SQL queries to extract specific information on customers, their demographics and associated products ordered over a determined period to inform advertisement, campaign and investment efforts to drive revenue generation.
+To write SQL queries to extract specific information on customers, their demographics and associated products ordered over a defined period to inform advertising campaign and investment efforts to drive revenue generation.
 
 **Methodology**
 
