@@ -28,10 +28,11 @@ There is a README.md file which summarizes the project goals, data tables and me
 + `eCommerce_KPI_analysis.sql` which contains SQL queries I generated to answer questions important for driving revenue growth and marketing efforts.
 
 ## Data processing
+1. I built a PostgreSQL database named `DTC`.
 
-1. I wrote SQL queries to create customer, sales and product tables within the PostgreSQL database and populate them with records from `.csv` tables.
+2. I wrote SQL Data Definition (DDL) and Data manipulation (DML) commands to create customer, sales and product tables within the `DTC` database, and populated them with records from `.csv` tables.
 
-2. Next, I wrote SQL queries to answer key questions to better understand customer demographics and product order performance.
+3. Next, I wrote SQL Data queries (DQL) to answer key questions to better understand customer demographics and product order performance.
 
 ## Questions answered
 
